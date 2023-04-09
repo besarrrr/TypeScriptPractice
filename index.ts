@@ -11,7 +11,7 @@ unit = 5;
 // let id = 5; // TS knows it's a number
 // let firstname = 'danny'; // TS knows it's a string
 // let hasDog = true; // TS knows it's a boolean
-
+ 
 // hasDog = 'yes'; // ERROR
 
 //  A union type is a variable that can be assigned more than one type:
@@ -85,3 +85,30 @@ const bear: Bear = {
     name: "Winnie",
     honey: true,
 }
+
+//Classes
+
+class PersonAvatar {
+    constructor(
+        name: string,
+        isCool: boolean,
+        email: string,
+        id: number,
+    ) {};
+};
+
+class Programmer extends PersonAvatar {
+
+    programmingLanguage: string[];
+
+    constructor (
+        name: string,
+        isCool: boolean,
+        email: string,
+        id: number,
+        pL: string [],
+    ) {
+        super( name, isCool, email, id,);
+        this.programmingLanguage = pL;
+    }
+};
